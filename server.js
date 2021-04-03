@@ -33,9 +33,14 @@ const server = express();
 
 // PORT capital // any number // avoid 5432 reserved
 
-const PORT = 3030;
-//------------------------
-// for today's lab only:
+// const PORT = 3030; //--> we set port -->when only using localhost
+// if working on heroku :
+const PORT = process.env.PORT || 3030 ;
+
+//means: on localhost use : 3030
+// on heroku host server use: auto generated PORT
+// its defined in file called: env
+
 
 // let server acceess static files in public folder (static html,css files)
 server.use(express.static('./public'));
