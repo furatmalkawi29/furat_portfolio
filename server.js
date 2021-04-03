@@ -45,6 +45,7 @@ const PORT = process.env.PORT || 3030 ;
 //-------------------------------
 // for today's lab only:
 
+
 // let server acceess static files in public folder (static html,css files)
 server.use(express.static('./public'));
 // now --> when we send  https://localhost:3030/index.html
